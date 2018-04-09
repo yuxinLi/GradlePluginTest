@@ -16,6 +16,10 @@ buildscript {
 
 apply plugin: 'com.lyx.firstplugin'
 
+hello {
+    message = "aaaaa"
+}
+
 android {
     compileSdkVersion 26
     defaultConfig {

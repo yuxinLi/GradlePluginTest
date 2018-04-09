@@ -10,10 +10,12 @@ class FirstPlugin implements Plugin<Project> {
     @Override
     public void apply(Project project) {
 
-        project.extensions.add("First" , FirstExtention)
+        project.extensions.add('hello', FirstExtention)
+        project.task('hello') << {
 
-        project.task("TestTask") {
-            println( project.First.message)
+            println 'kkkk'
+
+            println project.hello.message
         }
     }
 }
