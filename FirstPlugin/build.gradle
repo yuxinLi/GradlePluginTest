@@ -1,25 +1,19 @@
 apply plugin: 'groovy'
 apply plugin: 'maven'
 
-
-group = 'com.lyx.plugin'
-version = '1.0.0'
-
+group='com.lyx.plugin'
+version='1.0.0'
 
 uploadArchives {
     repositories {
         mavenDeployer {
-//            repository(url: 'maven.repo.local')
+            repository(url: uri('E:/repos'))
         }
     }
 }
-
 
 dependencies {
     compile gradleApi()
     compile localGroovy()
 }
 
-repositories {
-    mavenCentral()
-}

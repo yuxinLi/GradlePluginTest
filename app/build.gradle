@@ -1,5 +1,21 @@
 apply plugin: 'com.android.application'
 
+
+buildscript {
+    repositories {
+        maven {
+            url uri('E:/repos')
+        }
+    }
+
+    dependencies {
+        classpath 'com.lyx.plugin:FirstPlugin:1.0.0'
+    }
+}
+
+
+apply plugin: 'com.lyx.firstplugin'
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -25,4 +41,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
 }
