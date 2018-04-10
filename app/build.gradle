@@ -1,19 +1,4 @@
 apply plugin: 'com.android.application'
-
-
-buildscript {
-    repositories {
-        maven {
-            url uri('E:/repos')
-        }
-    }
-
-    dependencies {
-        classpath 'com.lyx.plugin:FirstPlugin:1.0.0'
-    }
-}
-
-
 apply plugin: 'com.lyx.firstplugin'
 
 hello {

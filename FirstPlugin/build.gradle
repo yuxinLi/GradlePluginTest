@@ -1,13 +1,16 @@
 apply plugin: 'groovy'
-apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 group='com.lyx.plugin'
 version='1.0.0'
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: uri('E:/repos'))
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId project.group
+            artifactId project.name
+            version project.version
+            from components.java
         }
     }
 }

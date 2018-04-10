@@ -1,1 +1,2 @@
+//include ':FirstPlugin'
 include ':app', ':FirstPlugin'
