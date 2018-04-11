@@ -1,0 +1,16 @@
+
+task helloWorld {
+    doFirst {
+        println " do first"
+    }
+
+    println " hello world"
+
+    doLast {
+        println 'do last'
+    }
+}
+
+task name << {
+    println " do last"
+}

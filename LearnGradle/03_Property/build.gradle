@@ -1,0 +1,34 @@
+
+
+setDescription(" my project description")
+println " $name  description = "+ project.description
+
+version = " project version"
+description = " project description "
+
+task showProjectProperties << {
+    println version
+    println project.description
+    println description  // task 的  description
+}
+
+project.ext.myProp = "myValue"
+ext {
+    someProp = 123
+}
+assert myProp == 'myValue'
+ext.someProp = 456
+
+task printMyProperties << {
+    // 直接执行 gradle printMyProperties 会报 myProperties 找不到
+    // gradle -P myProperties='aa' printMyProperties
+    // gradle -D org.gradle.project.myProperties=" -d param" printMyProperties
+
+    println myProperties
+}
+
+
+
+
+
+
