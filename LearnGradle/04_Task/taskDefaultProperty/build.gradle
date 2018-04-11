@@ -1,0 +1,17 @@
+
+version = '1.0.0'
+task printVersion << {
+    logger.quiet " version = $version"
+}
+
+task printVersion2 (group: 'versioning' , description:' printVersion2') << {
+    logger.quiet " version = $version"
+}
+
+task printVersion3 {
+    group =  " versioning"
+    description = 'printVersion3'
+    doLast {
+        logger.quiet "version = $version"
+    }
+}
