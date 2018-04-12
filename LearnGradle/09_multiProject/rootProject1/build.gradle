@@ -1,0 +1,12 @@
+
+allprojects {
+    task allTaskHello << {
+        println " hello form ${project.name}"
+    }
+}
+
+subprojects {
+    task subTaskHello << {
+        println " hello from sub project ${project.name}"
+    }
+}

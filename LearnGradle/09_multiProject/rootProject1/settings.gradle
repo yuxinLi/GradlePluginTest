@@ -1,0 +1,2 @@
+
+include ':sub:sub_project1' , ':sub:sub_project2'
